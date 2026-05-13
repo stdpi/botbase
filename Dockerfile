@@ -35,6 +35,11 @@ RUN dpkg --add-architecture i386 \
         nodejs \
         tzdata \
         winehq-stable \
+        libgl1-mesa-dri \
+        libgl1-mesa-glx \
+        libegl1-mesa \
+        mesa-utils \
+        
     && npm install -g npm@latest \
     && npx playwright install-deps chromium firefox \
     && rm -rf /var/lib/apt/lists/*
